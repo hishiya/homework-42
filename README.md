@@ -1,16 +1,62 @@
-# React + Vite
+# React: Асинхронний запит даних з Axios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Це простий React-проєкт, створений за допомогою Vite. Основна мета проєкту — продемонструвати, як робити асинхронні запити до сервера за допомогою бібліотеки **Axios** всередині хука **`useEffect`**.
 
-Currently, two official plugins are available:
+Компонент `DataFetcher` виконує запит до локального файлу `/user.json` при першому завантаженні та коректно обробляє три стани:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  **Завантаження (Loading):** Показує повідомлення "Завантаження даних...".
+2.  **Помилка (Error):** Показує червоне повідомлення "Не вдалося завантажити дані", якщо запит провалився.
+3.  **Успіх (Success):** Відображає отримані дані (ім'я та вік користувача).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Стек технологій
 
-## Expanding the ESLint configuration
+* **React**
+* **Vite** (для збірки та розробки)
+* **Axios** (для виконання HTTP-запитів)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Встановлення та запуск
+
+1.  **Клонуйте репозиторій:**
+    ```bash
+    # Замініть [URL] на посилання вашого репозиторію
+    git clone [URL-ВАШОГО-РЕПОЗИТОРІЮ]
+    ```
+
+2.  **Перейдіть до каталогу проєкту:**
+    ```bash
+    # Замініть 'my-react-app' на назву вашої папки, якщо вона інша
+    cd my-react-app
+    ```
+
+3.  **Встановіть базові залежності:**
+    ```bash
+    npm install
+    ```
+
+4.  **Встановіть `axios`:**
+    ```bash
+    npm install axios
+    ```
+
+5.  **Запустіть проєкт у режимі розробки:**
+    ```bash
+    npm run dev
+    ```
+
+    Після запуску відкрийте ваш браузер (зазвичай `http://localhost:5173/`), щоб побачити результат.
+
+---
+
+## Демо-версія
+
+Ви можете переглянути живу (live) демо-версію проєкту, розгорнуту на Netlify:
+https://homework-42-five.vercel.app/
+
+
+Ви можете переглянути живу (live) демо-версію проєкту, розгорнуту на Vercel / Netlify:
+
+**[ВСТАВТЕ СЮДИ ПОСИЛАННЯ НА ВАШЕ ДЕМО]**
